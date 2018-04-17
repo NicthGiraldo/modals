@@ -9,3 +9,6 @@ y "entryComponents", cuando es solo un componente (no una pagina) solo se coloca
 valores predeterminado incluyendo la eliminacion de la pagina "home" que trae por defecto el proycto de ionic
 se borra la importacion de la pagina "home" en "app.component.ts" y "app.module.ts", ademas de borrar en "declarations" 
 "entryComponents" del documento "app.module.ts"*/
+
+/*commit pasarPagina
+se crean dos botones con "ion-button" uno con funcion "(click)" y otra con redireccion html*/
