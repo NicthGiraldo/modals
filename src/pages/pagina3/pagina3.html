@@ -8,5 +8,17 @@
 
 
 <ion-content padding>
-  <h3 text-center>{{juegos.descripcion}}</h3>
+  <h2 text-center>Descripcion</h2>
+  <h4 text-center>{{juegos.descripcion}}</h4>
+
+  <button ion-button color="primary" block (click)="irAtras()"><!--la palabra "block" amplia el boton a todo el espacio que tenga disponible de forma horizontal-->
+    ir atras con evento
+  </button>
+  <button ion-button color="secondary" block (click)="irRoot()">
+    ir al root
+  </button>
+  <button ion-button color="danger" block navPop><!--el "navPop" es un atributo del html y tiene la funsion de ir hacia atras, realizar un "pop"-->
+    ir atras con HTML
+  </button>
+
 </ion-content>
