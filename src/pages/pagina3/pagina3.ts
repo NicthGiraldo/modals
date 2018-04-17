@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the Pagina3Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina3Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  juegos: any = {};//se crea este objeto para que los elementos enviados desde "pagina2.html" puedan guardarse para mostrarse o utilizarse en esta pagina
+
+  constructor(private NavParams:NavParams) {
+    this.juegos = this.NavParams.get("game");//la palabra "game" es la que se coloco en "this.navCtrl.push( Pagina3Page, {'game':juego})" en "pagina2.ts"
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Pagina3Page');
-  }
 
 }

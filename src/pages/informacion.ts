@@ -12,3 +12,10 @@ se borra la importacion de la pagina "home" en "app.component.ts" y "app.module.
 
 /*commit pasarPagina
 se crean dos botones con "ion-button" uno con funcion "(click)" y otra con redireccion html*/
+
+/*commit enviandoParametros
+se mustra dos diferentes formas para realizar la transferencia de datos a otra pagina por medio del navParams
+se esta enviando la informacion de un array implementado en "pagina2.ts" a la pagina3
+por medio de las paginas .ts se utiliza el objeto y se importa el "NavController" y el "NavParams" de "ionic-angular"
+el constructor de la pagina que se crea por defecto ya implementa estas funciones por medio de la variable "navCtrl"
+y "navParams" */

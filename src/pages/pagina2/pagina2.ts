@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the Pagina2Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Pagina3Page } from '../index.paginas'
 
 @IonicPage()
 @Component({
@@ -15,11 +9,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina2Page {
 
+  pagina3: any = Pagina3Page;
+
+  juegos:any[] = [
+    {
+      nombre:"Metal Gear Solid",
+      descripcion:"juego de playStation 1 de origen japones"
+    },
+    {
+      nombre:"Black",
+      descripcion:"uno de los mejores juegos FPS de playStation 2"
+    },
+    {
+      nombre:"need for speed mostwanted",
+      descripcion:"juego revolucionario de coches en la plataforma de playStation 2"
+    },
+    {
+      nombre:"final fantasy 13",
+      descripcion:"primer juego de final fantasy en hd llevado a las plataformas playStation 3 y xbox 360"
+    }
+  ]
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Pagina2Page');
+  irPagina3(juego:any){
+    console.log(juego);
+    this.navCtrl.push( Pagina3Page, {'game':juego})
   }
 
 }

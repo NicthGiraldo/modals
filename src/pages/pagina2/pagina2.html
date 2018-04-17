@@ -1,18 +1,27 @@
-<!--
-  Generated template for the Pagina2Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>pagina2</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>listado de juegos</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <h3>enviando informacion con evento</h3>
+  <ion-list><!--se crea una lista para mostrar la informacion-->
+    <ion-item *ngFor="let jg of juegos" (click)="irPagina3(jg)"><!--recorremos el array que se creo en "pagina2.ts"-->
+      {{jg.nombre}}<!--con la variable "jg" creada en el ngFor se selecciona la informacion traida desde "pagina2.ts"-->
+    </ion-item>
+  </ion-list>
+
+  <h3>enviando informacion por HTML</h3><!--este metodo no utiliza la clase "pagina2.ts" todo es controlado desde el HTML-->
+  <ion-list><!--se crea una lista para mostrar la informacion-->
+    <ion-item *ngFor="let jg of juegos" 
+        [navPush]="pagina3" 
+        [navParams]="{'game':jg}"><!--el "[navPush]" funciona igual que "navCtrl.push"
+        el "[navParams]" manda los parametros que se reciben en "pagina3" se tiene que colocar con la palabra clave y la variable del ngFor-->
+      {{jg.nombre}}<!--con la variable "jg" creada en el ngFor se selecciona la informacion traida desde "pagina2.ts"-->
+    </ion-item>
+  </ion-list>
 
 </ion-content>
