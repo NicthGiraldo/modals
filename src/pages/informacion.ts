@@ -24,3 +24,9 @@ y "navParams" */
 se asignaron dos paginas raiz para los tabs "pagina principal" y "ajustes" y se controlo el devolverse de la pagina
 "ajustes" sin necesidad de la funsion "push" implementando el "parent.select()" colocando el "2" entre los parentesis
 para llegar a la posicion 3 ya que se manejan los tabs como un array */
+
+/*commit paginaModal
+se muestra cuales son las librerias que se tienen que importar para que funcione correctamente ademas de como enviar
+parametros y cerrar el modal sin necesidad de enviar parametros
+las clases que se tiene que importar son "ViewController" para controlar las vistas y que se muestra en la pagina modal
+y "ModalController" que es la que se encarga de crear la pagina modal */

@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams } from 'ionic-angular';//se tiene que importar la clase "ViewController" y agregarlo en el constructor
 
-/**
- * Generated class for the ModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +9,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ModalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  nombre: string = "";
+  edad: number = 0;
+
+  constructor(public viewCtrl: ViewController, public navParams: NavParams) {//se agrega en el constructor el "ViewController"
+    this.nombre = this.navParams.get("nombre");//traemos los parametros que se envian desde "ajustes"
+    this.edad = this.navParams.get("edad");
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ModalPage');
+  cerrarConParametros() {//se crean dos objetos para colocar un poco de complejidad y mostrar que se puede traer cualquier informacion
+    let data = {
+      nombre: "juan carlos",
+      edad: 29,
+      coords: {
+        lat: 10,
+        lng: -10
+      }
+    };
+    this.viewCtrl.dismiss( data );//con la funsion "dismiss" se cierra la pagina modal, al colocarle el objeto dentro de los parentesis 
+  }//se manda la informacion que se añadio en el metodo
+
+  cerrarSinParametros() {
+    this.viewCtrl.dismiss();//se cierra sin mandar informacion 
   }
 
 }
