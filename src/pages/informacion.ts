@@ -19,3 +19,8 @@ se esta enviando la informacion de un array implementado en "pagina2.ts" a la pa
 por medio de las paginas .ts se utiliza el objeto y se importa el "NavController" y el "NavParams" de "ionic-angular"
 el constructor de la pagina que se crea por defecto ya implementa estas funciones por medio de la variable "navCtrl"
 y "navParams" */
+
+/*commit tabs
+se asignaron dos paginas raiz para los tabs "pagina principal" y "ajustes" y se controlo el devolverse de la pagina
+"ajustes" sin necesidad de la funsion "push" implementando el "parent.select()" colocando el "2" entre los parentesis
+para llegar a la posicion 3 ya que se manejan los tabs como un array */

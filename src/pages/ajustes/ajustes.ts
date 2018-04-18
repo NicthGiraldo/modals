@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the AjustesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-ajustes',
@@ -18,8 +11,8 @@ export class AjustesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AjustesPage');
+  activarPrincipal(){
+    this.navCtrl.parent.select(2);//aqui llamamos directamente a la pagina tabs, ya que si colocamos un push se creara otra pagina y no es la idea
   }
 
 }
