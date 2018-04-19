@@ -1,18 +1,29 @@
 <ion-header>
-
   <ion-navbar color="primary">
     <ion-title>Pagina - principal</ion-title>
+    <ion-buttons><!--se coloca dentro de la etiqueta "ion-navbar" para que quede dentro de la barra de navegacion de la pagina o pantalla-->
+      <!--"icon-only " indica que se colocara solamente el icono sin nigun fondo-->
+      <button ion-button 
+              icon-only 
+              (click)="mostrarMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+
 
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="primary" block (click)="navegarPagina()"> <!--con funcion-->
+  <button ion-button color="primary" block (click)="navegarPagina()">
+    <!--con funcion-->
     ir a pagina 2
   </button>
 
-  <button ion-button color="secondary" block [navPush]="pagina2">
-      ir a pagina 2 - html
-    </button>
+  <button ion-button color="secondary" block [navPush]="pagina2"><!--[navPush] hace la funcion de dirigirnos una pagina, solo tendremos que indicar la pagina como 
+  se muestra en este ejemplo-->
+    ir a pagina 2 - html
+  </button>
 
 </ion-content>

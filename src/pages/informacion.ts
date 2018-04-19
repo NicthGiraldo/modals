@@ -33,3 +33,6 @@ y "ModalController" que es la que se encarga de crear la pagina modal */
 
 /*instalar firebase
 npm install angularfire2 firebase --save */
+
+/*commit menuLateral
+se coloco el menu lateral, se modifico el como abrir, cerrar y redirigir por medio de el menu */
