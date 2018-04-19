@@ -1,1 +1,32 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content"><!--este codigo se extajo desde los documentos de ionic-->
+
+    <ion-header>
+      <ion-toolbar color="morado"><!--parte de arriba del menu-->
+        <ion-title>Páginas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content><!--contenido de la lista que se mostrara en el menu lateral-->
+      <ion-list>
+
+        <button ion-item (click)="abrirPagina(tabs)"><!--se coloca una funsion con la variable que se crea en "app.component.ts
+        la cual estará igualada a la pagina a la que se quiere redirigir-->
+          abrir tabs
+        </button>
+
+        <button ion-item (click)="abrirPagina(ajustes2)">
+          abrir ajustes2
+        </button>
+
+        <!--<button ion-item (click)="closeMenu()">
+          Close Menu
+        </button>-->
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+
+<ion-nav [root]="rootPage" #content></ion-nav><!--se coloca "#content" para hacer la referencia y se muestre el menu que se copio
+en la parte de arriba-->

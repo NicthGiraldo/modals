@@ -3,12 +3,16 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/index.paginas';
+import { TabsPage,Ajustes2Page } from '../pages/index.paginas';//se traen las paginas que se utilizaran para el menu
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+  tabs = TabsPage;//se guardan las paginas que se trajeron en variables diferentes 
+  ajustes2 = Ajustes2Page;
+
   rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -18,6 +22,10 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+
+  abrirPagina(pg:any){
+    this.rootPage = pg;//para abrir la pagina despues de darle click en el menu, es necesario igualarla a la "rootPage"
   }
 }
 

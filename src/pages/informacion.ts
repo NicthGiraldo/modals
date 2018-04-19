@@ -30,3 +30,6 @@ se muestra cuales son las librerias que se tienen que importar para que funcione
 parametros y cerrar el modal sin necesidad de enviar parametros
 las clases que se tiene que importar son "ViewController" para controlar las vistas y que se muestra en la pagina modal
 y "ModalController" que es la que se encarga de crear la pagina modal */
+
+/*instalar firebase
+npm install angularfire2 firebase --save */
